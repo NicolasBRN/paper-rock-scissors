@@ -37,3 +37,21 @@ function oneRound () {
     }
 }
 
+function game() {
+    let player = 0;
+    let computer = 0;
+    for (let i = 0; i < 5; i++) {
+        let result = oneRound();
+        console.log(result);
+
+        if (result === "You win!") {player++;}
+        if (result === "You lose!") {computer++;}
+    }
+    if (player > computer) {console.log("YOU ARE THE WINNER!")}
+    else if (player < computer) {console.log("You loooooooooseeee to a machineeee!")}
+        else {console.log("Its a BIG TIE")}
+}
+
+
+// console.log(oneRound(playerSelection, computerSelection))
+game();
